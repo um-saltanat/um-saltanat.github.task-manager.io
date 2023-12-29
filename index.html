@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task Manager</title>
+</head>
+<body>
+    <h1>Task Manager</h1>
+    <div id="authSection">
+        <div class="container" id="authForm">
+            <h2>Login</h2>
+            <form>
+                <div class="input-container">
+                    <input type="text" id="username" required placeholder="Username">
+                </div>
+                <div class="input-container">
+                    <input type="password" id="password" required placeholder="Password">
+                </div>
+                <button type="button" onclick="login()">Login</button>
+                <p id="loginError" class="error"></p>
+            </form>
+        </div>
+        <div class="container" id="authForm">
+            <h2>Sign Up</h2>
+            <form>
+                <div class="input-container">
+                    <input type="text" id="signupUsername" required placeholder="Username">
+                </div>
+                <div class="input-container">
+                    <input type="password" id="signupPassword" required placeholder="Password">
+                </div>
+                <button type="button" onclick="signup()">Sign Up</button>
+                <p id="signupError" class="error"></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="taskManager" style="display: none;">
+        <button onclick="signOut()" id="signout">Sign Out</button>
+        <div class="container">
+            <h2>Task Manager</h2>
+            <div class="add-task">
+                <input type="text" id="taskInput" placeholder="Add a new task">
+                <button onclick="addTask()" id="add-btn"></button>
+            </div>
+            <ul id="taskList" class="task-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
